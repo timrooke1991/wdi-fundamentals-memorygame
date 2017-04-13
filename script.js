@@ -23,6 +23,7 @@ var cards = [
 
 var cardsInPlay = [];
 
+// FUNCTION => Alert success/failure message
 var checkForMatch = function () {
 		if (cardsInPlay[0] === cardsInPlay[1]) {
 			alert("You found a match!");
@@ -31,6 +32,7 @@ var checkForMatch = function () {
 		}
 }
 
+// FUNCTION => Reveal card clicked, check for match on second click
 var flipCard = function () {
 	var cardId = this.getAttribute('data-id');
 
@@ -46,6 +48,7 @@ var flipCard = function () {
 	}
 }
 
+// FUNCTION => Build board within #game-board
 var createBoard = function() {
 	 for (var i = 0; i < cards.length; i++) {
 	 	var cardElement = document.createElement('img');
